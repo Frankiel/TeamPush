@@ -36,5 +36,8 @@
     <string name="allrooms_fragment">ALL ROOMS</string>
     <string name="settings_fragment">SETTINGS</string>
     <string name="about_fragment">ABOUT</string>
+    <string name="LoginActivity">LoginActivity</string>
+    <string name="RegisterActivity">RegisterActivity</string>
+    <string name="WeAreInActivity">WeAreInActivity</string>
 
 </resources>

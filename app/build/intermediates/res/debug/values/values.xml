@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -17,10 +17,10 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <color name="acbarcolor">#009D91</color>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
@@ -154,11 +154,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -166,10 +166,10 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="navigation_drawer_width">240dp</dimen>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -183,6 +183,13 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="LoginActivity">LoginActivity</string>
+    <string name="RegisterActivity">RegisterActivity</string>
+    <string name="WeAreInActivity">WeAreInActivity</string>
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <eat-comment/>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -200,7 +207,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="about_fragment">ABOUT</string>
     <string name="action_search">Search</string>
@@ -232,19 +239,19 @@
     <string name="title_section3">Settings</string>
     <string name="title_section4">About</string>
     <string name="title_section5">Log out</string>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="android:colorBackground">@color/acbarcolor</item>
     </style>
-    <!-- From: file:/F:/Team/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
+    <!-- From: file:/C:/Users/Frank/Desktop/TeamPushAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>

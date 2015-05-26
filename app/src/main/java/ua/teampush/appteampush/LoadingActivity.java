@@ -5,10 +5,20 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseException;
+import com.parse.ParseInstallation;
+import com.parse.ParsePush;
+import com.parse.ParseUser;
+import com.parse.PushService;
+import com.parse.SaveCallback;
 
 import java.util.Timer;
 
@@ -20,6 +30,9 @@ public class LoadingActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("I am in ", getClass().getName());
+
+
         setContentView(R.layout.activity_loading);
         bar = (ProgressBar) findViewById(R.id.progressBar);
         bar.setOnClickListener(this);
