@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="F:\Android\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="F:\ff\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-b44ff473e4bad05e29135332a5b8a2c6edaec37a.jar" />
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="F:\ff\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\classes-2776355650ec779b2b75c5b12a26dcfa6ca7e4fd.jar" />
     </item>
     <item
         jar="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
@@ -16,18 +16,18 @@
         <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\classes-85815c40d5fd9f7395d297eee18e92ab4113dabd.jar" />
     </item>
     <item
-        jar="C:\Users\Frank\Desktop\TeamPushAndroid\app\libs\Parse-1.9.2.jar"
+        jar="F:\ff\TeamPushAndroid\app\libs\Parse-1.9.2.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="fe739334780fe321141e62720822c2d456061899">
-        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\Parse-1.9.2-051e260e9369b2f6aeac3fa8410dd6688e3b42a3.jar" />
+        <dex dex="F:\ff\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\Parse-1.9.2-71e0c99f0a94a85405b12028e350834bd8d27e50.jar" />
     </item>
     <item
-        jar="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jar="C:\Users\Frank\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-3c815bf4f718a9b53017b5ea135ef6020c880d37.jar" />
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-f769b99314a990107ebff2155daa7c6f2466aadf.jar" />
     </item>
     <item
         jar="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
@@ -37,11 +37,39 @@
         <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\classes-87180797282f666c48e8af1a95b1f14fa0acab8f.jar" />
     </item>
     <item
-        jar="C:\Users\Frank\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jar="F:\Android\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-f769b99314a990107ebff2155daa7c6f2466aadf.jar" />
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-b44ff473e4bad05e29135332a5b8a2c6edaec37a.jar" />
+    </item>
+    <item
+        jar="F:\ff\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="F:\ff\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\classes-01ab31c8196acc3438be33c9b3eaa9b3846105cf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-3c815bf4f718a9b53017b5ea135ef6020c880d37.jar" />
+    </item>
+    <item
+        jar="F:\ff\TeamPushAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="F:\ff\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-7d6503dc30683c1dfca9ee28f15444e8042edab0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Frank\Desktop\TeamPushAndroid\app\libs\Parse-1.9.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fe739334780fe321141e62720822c2d456061899">
+        <dex dex="C:\Users\Frank\Desktop\TeamPushAndroid\app\build\intermediates\pre-dexed\debug\Parse-1.9.2-051e260e9369b2f6aeac3fa8410dd6688e3b42a3.jar" />
     </item>
 
 </items>

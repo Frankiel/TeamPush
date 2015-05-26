@@ -20,6 +20,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.parse.ParsePush;
+
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -69,7 +71,13 @@ public class MainActivity extends ActionBarActivity
                 objfragment=new About_Fragment();
                 break;
             case 4:
-                System.exit(0);
+                objfragment=new MyRooms_Fragment();
+                ParsePush push = new ParsePush();
+                push.setChannel("");
+                push.setMessage("We did it");
+                push.sendInBackground();
+                break;
+                //System.exit(0);
             default:
                 break;
         }
