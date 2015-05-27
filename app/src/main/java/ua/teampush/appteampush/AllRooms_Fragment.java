@@ -4,9 +4,14 @@ import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import java.util.ArrayList;
 
 
 
@@ -27,6 +32,8 @@ public class AllRooms_Fragment extends android.support.v4.app.Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ListView roomListView;
+    ArrayList<Room> rooms;
 
     private OnFragmentInteractionListener mListener;
 
@@ -50,8 +57,18 @@ public class AllRooms_Fragment extends android.support.v4.app.Fragment {
     public AllRooms_Fragment() {
         // Required empty public constructor
     }
-
-    @Override
+	
+    private ArrayList<Room> GetSearchResults(){
+        ArrayList<Room> results = new ArrayList<>();
+        results.add(new Room(1,"1st in all room","pass","admin1", 11));
+        results.add(new Room(1,"2nd in all room","pass","admin2", 12));
+        results.add(new Room(1,"3rd in all room","pass","admin3", 13));
+        results.add(new Room(1, "4th in all room", "pass", "admin4", 14));
+        results.add(new Room(1, "5th in all room", "pass", "admin5", 12));
+        return results;
+    }
+    
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -63,8 +80,26 @@ public class AllRooms_Fragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.allrooms_fragment, container, false);
+        rooms = GetSearchResults();
+        Log.d("room", "1");
+        roomListView= (ListView) inflater.inflate(R.layout.myrooms_fragment, container, false);
+        roomListView.setAdapter(new RoomList(getActivity(), rooms));
+        roomListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                Fragment t = new Messages_Fragment();
+                fragmentManager.beginTransaction().add(R.id.container, t)
+                        .addToBackStack("").commit();
+
+            }
+        });
+
+        ((MainActivity) getActivity()).setActionBarTitle("All rooms");
+        Log.d("room", "2");
+        return roomListView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

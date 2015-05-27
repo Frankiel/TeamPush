@@ -82,7 +82,7 @@ public class MainActivity extends ActionBarActivity
                 break;
         }
         fragmentManager.beginTransaction()
-                .replace(R.id.container, objfragment) //HERE WE WILL CALL FRAGMENTS!!!!!
+                .add(R.id.container, objfragment) //HERE WE WILL CALL FRAGMENTS!!!!!
                 .commit();
     }
 
@@ -113,10 +113,12 @@ public class MainActivity extends ActionBarActivity
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(mTitle);
-
+        //actionBar.setTitle(mTitle);
     }
 
+	    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -185,5 +187,4 @@ public class MainActivity extends ActionBarActivity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
-
 }
