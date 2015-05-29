@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
@@ -25,7 +26,13 @@ import com.parse.ParsePush;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
+    private static String currUser = "";
+    public static void setCurrUser(String s){
+        currUser = s;
+    }
+    public static String getCurrUser(){
+        return currUser;
+    }
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -40,6 +47,7 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -70,14 +78,15 @@ public class MainActivity extends ActionBarActivity
             case 3:
                 objfragment=new About_Fragment();
                 break;
-            case 4:
+            case 4:/*
                 objfragment=new MyRooms_Fragment();
                 ParsePush push = new ParsePush();
                 push.setChannel("");
                 push.setMessage("We did it");
-                push.sendInBackground();
-                break;
+                push.sendInBackground();*/
                 //System.exit(0);
+                //finish();
+                break;
             default:
                 break;
         }

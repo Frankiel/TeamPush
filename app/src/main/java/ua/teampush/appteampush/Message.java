@@ -1,7 +1,7 @@
 package ua.teampush.appteampush;
 
 /**
- * Created by Анна on 27.05.2015.
+ * Created by Anna on 27.05.2015.
  */
 public class Message {
     private int id;

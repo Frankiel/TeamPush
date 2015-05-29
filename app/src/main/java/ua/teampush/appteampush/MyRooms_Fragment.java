@@ -1,5 +1,6 @@
 package ua.teampush.appteampush;
 
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -32,9 +33,16 @@ public class MyRooms_Fragment extends android.support.v4.app.Fragment {
     private String mParam2;
     private OnFragmentInteractionListener mListener;
     private ListView roomListView;
+    private static String currRoom = "";
+    public static void setCurrRoom(String s){
+        currRoom = s;
+    }
+    public static String getCurrRoom(){
+        return currRoom;
+    }
     ArrayList<Room> rooms;
 
-    /**
+    /*
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
@@ -79,12 +87,15 @@ public class MyRooms_Fragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         rooms = GetSearchResults();
         roomListView= (ListView) inflater.inflate(R.layout.myrooms_fragment, container, false);
+        roomListView.setDivider(new ColorDrawable(0x009D91));
+        roomListView.setDividerHeight(3);
         roomListView.setAdapter(new RoomList(getActivity(), rooms));
         roomListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+                setCurrRoom("room");
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 Fragment t = new Messages_Fragment();
                 fragmentManager.beginTransaction().add(R.id.container, t)

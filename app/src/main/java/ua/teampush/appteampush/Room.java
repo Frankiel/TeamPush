@@ -1,7 +1,7 @@
 package ua.teampush.appteampush;
 
 /**
- * Created by Анна on 26.05.2015.
+ * Created by Anna on 26.05.2015.
  */
 public class Room {
     private int id;

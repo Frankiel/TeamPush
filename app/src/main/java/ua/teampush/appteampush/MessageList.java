@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Анна on 27.05.2015.
+ * Created by Anna on 27.05.2015.
  */
 public class MessageList extends BaseAdapter {
     private static ArrayList<Message> itemDetailsrrayList;

@@ -2,11 +2,13 @@ package ua.teampush.appteampush;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Looper;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import java.io.BufferedReader;
@@ -30,11 +32,23 @@ import android.content.DialogInterface.OnCancelListener;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
+
+import static android.text.TextUtils.join;
+import static java.lang.Thread.sleep;
+
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     TextView textview;
     TextView textview2;
     Button log;
+    Boolean login = false;
+    Boolean changed = false;
+    private void setLogin(boolean b){
+        login = b;
+    }
+    private void change(boolean b){
+        changed = b;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +57,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         textview = (TextView) findViewById(R.id.registerText);
         textview2 = (TextView) findViewById(R.id.passwordEditText);
         textview.setOnClickListener(this);
-
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+        //getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+       // getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
         log = (Button) findViewById(R.id.loginButton);
         log.setOnClickListener(this);
@@ -51,19 +68,19 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+// Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_loading, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+// Handle action bar item clicks here. The action bar will
+// automatically handle clicks on the Home/Up button, so long
+// as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+//noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -79,7 +96,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         final EditText string1 = (EditText)findViewById(R.id.loginEditText);
         final EditText string2 = (EditText)findViewById(R.id.passwordEditText);
         final Button but = (Button)findViewById(R.id.loginButton);
-        new Thread(new Runnable() {
+        login = true;
+        Runnable r =  new Thread(){
             public void run() {
 
                 try{
@@ -87,7 +105,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     URLConnection connection = url.openConnection();
 
                     String inputString = string1.getText().toString()+"/"+string2.getText().toString();
-                    //inputString = URLEncoder.encode(inputString, "UTF-8");
+//inputString = URLEncoder.encode(inputString, "UTF-8");
 
                     Log.d("inputString", inputString);
 
@@ -101,22 +119,66 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                     String returnString="";
 
                     returnString = in.readLine();
-                    but.setText(returnString);
-                    in.close();
+//but.setText(returnString);
+                    Log.d("returnString:", returnString);
 
+                    setLogin(returnString.equals("true"));
+                    //login = returnString.split("")[0]=="true";
+                    Log.d("login:", login.toString());
+                    //String c = login.toString();
+                    Log.d("thread:", "end");
+                    change(true);
                 }catch(Exception e)
                 {
-                    Log.d("Exception",e.toString());
+                    Log.d("Exception", e.toString());
+                    setLogin(false);
+
+                    Log.d("login th:", login.toString());
                 }
             }
-        }).start();
+        };
+        Thread t = new Thread(r);
+        t.start();
+
+
+
+        try {
+            //sleep(100);
+            t.join();
+        } catch (InterruptedException e) {
+            Log.d("Exception", e.toString());        }
+        /*try {
+        Thread.currentThread().join();
+        } catch (InterruptedException e)
+        {
+        Log.d("Exception:", e.toString());
+        }*/
+        Log.d("login main:", login.toString());
         if(v.getId() == R.id.registerText){
             Intent intent = new Intent(this, RegisterActivity.class);
             startActivityForResult(intent, 1);
         }else if(v.getId() == R.id.loginButton){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivityForResult(intent, 0);
-            //WE NEED TO SAVE LOG AND PASS TO PREFERENCES HERE
+            if(!login){
+                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                builder.setTitle("Error logging in")
+                        .setMessage("Login or password is incorrect")
+
+                        .setCancelable(false)
+                        .setNegativeButton("OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                AlertDialog alert = builder.create();
+                alert.show();
+//login = false;
+            }
+            else{
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivityForResult(intent, 0);
+//WE NEED TO SAVE LOG AND PASS TO PREFERENCES HERE
+            }
         }
     }
 
