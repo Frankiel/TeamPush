@@ -1,0 +1,9 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:choiceMode="singleChoice"
+    android:divider="#009D91"
+    android:dividerHeight="3dp"
+    android:background="#D8F8F8"
+    tools:context="ua.teampush.appteampush.MyRooms_Fragment" />
+<!-- From: file:/F:/TEMP/TeamPush/app/src/main/res/layout/fragment_roomlist.xml -->

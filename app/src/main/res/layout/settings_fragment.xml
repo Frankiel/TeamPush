@@ -1,10 +1,68 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="ua.teampush.appteampush.Settings_Fragment"
-    android:background="#D8F8F8">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft= "16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#D8F8F8"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:id="@+id/settingslayout">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/settings_fragment" />
 
-</FrameLayout>
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifications         "
+        android:id="@+id/switch1"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:textColor="#009D91"
+        android:singleLine="false" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView8"
+        android:layout_gravity="center_horizontal"
+        android:background="#009D91"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Change Profile Info"
+        android:id="@+id/textView9"
+        android:layout_gravity="left|center_horizontal"
+        android:textColor="#009D91"
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textView10"
+        android:layout_gravity="center_horizontal"
+        android:background="#009D91"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Do not disturb"
+        android:id="@+id/textView11"
+        android:layout_gravity="left|center_horizontal"
+        android:textColor="#009D91"
+        android:textSize="25dp"
+        android:layout_marginLeft="20dp" />
+
+</LinearLayout>
+
+

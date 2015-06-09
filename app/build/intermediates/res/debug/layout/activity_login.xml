@@ -40,7 +40,7 @@
         <EditText
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:inputType="textEmailAddress"
+            android:inputType="textEmailAddress|text"
             android:ems="10"
             android:background="#D8F8F8"
             android:id="@+id/loginEditText"
@@ -55,7 +55,6 @@
         <EditText
             android:layout_width="250dp"
             android:layout_height="30dp"
-            android:inputType="textPassword"
             android:ems="10"
             android:background="#D8F8F8"
             android:id="@+id/passwordEditText"
@@ -64,7 +63,8 @@
             android:layout_marginBottom="20dp"
             android:textSize="20sp"
             android:hint="@string/password"
-            android:textColor="#00665E"/>
+            android:textColor="#00665E"
+            android:inputType="textPassword" />
 
         <Button
             android:layout_width="90dp"
@@ -89,4 +89,4 @@
             android:clickable="true" />
 
     </LinearLayout>
-</LinearLayout><!-- From: file:/F:/ff/TeamPushAndroid/app/src/main/res/layout/activity_login.xml -->
+</LinearLayout><!-- From: file:/F:/TEMP/TeamPush/app/src/main/res/layout/activity_login.xml -->

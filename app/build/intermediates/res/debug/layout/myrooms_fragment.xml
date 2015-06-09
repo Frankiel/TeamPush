@@ -1,11 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="ua.teampush.appteampush.MyRooms_Fragment"
-    android:background="#D8F8F8">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/myrooms_fragment" />
-
-</FrameLayout>
-<!-- From: file:/F:/ff/TeamPushAndroid/app/src/main/res/layout/myrooms_fragment.xml -->
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#33CEC3"/><!-- From: file:/F:/TEMP/TeamPush/app/src/main/res/layout/myrooms_fragment.xml -->

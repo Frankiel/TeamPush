@@ -37,7 +37,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="ua.teampush.appteampush.LoadingActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,19 +47,23 @@
         </activity>
         <activity
             android:name="ua.teampush.appteampush.LoginActivity"
-            android:label="@string/LoginActivity" >
+            android:label="@string/LoginActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
         <activity
             android:name="ua.teampush.appteampush.RegisterActivity"
-            android:label="@string/RegisterActivity" >
+            android:label="@string/RegisterActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
         <activity
             android:name="ua.teampush.appteampush.WeAreInActivity"
-            android:label="@string/WeAreInActivity" >
+            android:label="@string/WeAreInActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
         <activity
             android:name="ua.teampush.appteampush.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:label="@string/title_activity_main"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
 
         <service android:name="com.parse.PushService" />
